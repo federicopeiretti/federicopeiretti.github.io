@@ -11,11 +11,11 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Home"
 title_separator          : "-"
-name                     : &name "Your Name Here"
-description              : &description "Your Title / Role Here"
-url                      : "https://minimalacademicsite.github.io" 
+name                     : &name "Federico Peiretti"
+description              : &description "PhD in Computer Science"
+url                      : "https://federicopeiretti.github.io" 
 baseurl                  : "" 
-repository               : "minimalacademicsite/minimalacademicsite.github.io"
+repository               : "federicopeiretti/federicopeiretti.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -23,14 +23,14 @@ repository               : "minimalacademicsite/minimalacademicsite.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "John Doe"
-  description      : ""
+  name             : "Federico Peiretti"
+  description      : "PhD in Computer Science"
   pronouns         : ""
-  bio              : "I am a researcher focusing on machine learning and data science."
-  location         : "City, Country"
-  employer         : "Institution Name"
+  bio              : "PhD in Computer Science at Dept. of Computer Science, University of Torino (Italy). My major research interests regard data mining and machine learning, algorithmic fairness, privacy-preserving data analysis and social network analysis. I'm a member of the Machine Learning and Data Mining group (Dept. of Computer Science, University of Torino)."
+  location         : "Torino, Italy"
+  employer         : "Dept. of Computer Science, University of Torino"
   uri              : 
-  email            : "your.email@example.com" 
+  email            : "federico.peiretti@unito.it" 
 
   # Academic websites
   academia         : 
