@@ -625,9 +625,9 @@ author_profile: false
 
           const content = this.getAttribute('data-full');
 
+          const label = category === 'manuscripts' ? 'Journal' : 'Venue';
           const html =
-            '<strong>Venue:</strong> ' + content;
-
+              '<strong>' + label + ':</strong> ' + content;
 
           if (
             detailsBox.style.display === "block" &&
