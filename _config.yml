@@ -35,19 +35,19 @@ author:
   # Academic websites
   academia         : 
   arxiv            : 
-  googlescholar    : "your-google-scholar-id"
+  googlescholar    : "9nv1xY4AAAAJ"
   impactstory      : 
-  orcid            : "your-orcid-id"
+  orcid            : "0000-0001-7648-162X"
   semantic         : 
   pubmed           : 
-  researchgate     : 
-  scopus           : 
+  researchgate     : "Federico-Peiretti"
+  scopus           : "57204652913"
 
   # Repositories and software development
   bitbucket        : 
   codepen          : 
   dribbble         : 
-  github           : "your-github-username"
+  github           : "federicopeiretti"
   kaggle           : 
   stackoverflow    : 
 
@@ -62,7 +62,7 @@ author:
   keybase          : 
   instagram        : 
   lastfm           : 
-  linkedin         : "your-linkedin-username"
+  linkedin         : "federico-peiretti"
   mastodon         : 
   medium           : 
   pinterest        : 
@@ -80,8 +80,8 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
+  #books:
+  #  title: 'Books'
   manuscripts:
     title: 'Journal Articles'    
   conferences:
