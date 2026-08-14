@@ -7,36 +7,36 @@ author_profile: false
 
 <style>
   /* =========================================
-     1. STATIC LIGHT THEME VARIABLES (Locked)
+     1. STATIC LIGHT THEME VARIABLES
      ========================================= */
   :root {
-    --port-primary: #2c3e50;    /* Dark Academic Blue */
-    --port-text: #3b3b3b;       /* Dark Gray for readability */
-    --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #fdfdfd;         /* Almost white for cards */
-    --port-border: #eaeaea;     /* Light gray borders */
+    --port-primary: #2c3e50;
+    --port-text: #3b3b3b;
+    --port-muted: #64748b;
+    --port-bg: #fdfdfd;
+    --port-border: #eaeaea;
   }
 
   /* =========================================
-     2. GLOBAL HEADER FIXES (Matches Portfolio)
+     2. GLOBAL HEADER FIXES
      ========================================= */
-  .masthead, 
-  .masthead__inner-wrap, 
-  .masthead__menu, 
-  .masthead__menu ul, 
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu,
+  .masthead__menu ul,
   .greedy-nav {
     background-color: #ffffff !important;
     background: #ffffff !important;
   }
-  
+
   .masthead {
     border-bottom: 1px solid var(--port-border) !important;
   }
 
-  .masthead a, 
+  .masthead a,
   .masthead__menu-item,
   .masthead__menu-item a,
-  .greedy-nav a, 
+  .greedy-nav a,
   .greedy-nav .visible-links,
   .greedy-nav .visible-links li,
   .greedy-nav .visible-links a {
@@ -55,14 +55,17 @@ author_profile: false
     color: var(--port-primary) !important;
   }
 
-  h1.page__title, .page__title {
+  h1.page__title,
+  .page__title {
     color: var(--port-primary) !important;
     font-weight: 700 !important;
   }
 
-  /* Collaboration Alert */
+  /* =========================================
+     3. GOOGLE SCHOLAR / COLLABORATION BOX
+     ========================================= */
   .collab-box {
-    background-color: var(--accent-color);
+    background-color: #f8fbfd;
     border-left: 4px solid var(--port-primary);
     padding: 14px 18px;
     font-size: 0.95em;
@@ -75,261 +78,408 @@ author_profile: false
   }
 
   /* =========================================
-     3. PUBLICATIONS LAYOUT STYLES
+     4. PUBLICATIONS LAYOUT
      ========================================= */
   .pub-section-title {
-    margin-top: 45px; 
-    border-bottom: 1px solid var(--port-border); 
-    padding-bottom: 8px; 
-    text-transform: uppercase; 
-    color: var(--port-primary); 
-    font-size: 1.15em !important; 
+    margin-top: 45px;
+    border-bottom: 1px solid var(--port-border);
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    color: var(--port-primary);
+    font-size: 1.15em !important;
     font-weight: 700;
     letter-spacing: 0.1em;
   }
 
-  .pub-list { 
-    line-height: 1.6; 
-    margin-bottom: 40px; 
-    font-size: 0.95em; 
-    color: var(--port-text); 
-    padding-left: 20px; 
+  .pub-list {
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-size: 0.95em;
+    color: var(--port-text);
+    padding-left: 20px;
   }
-  .pub-list li { 
-    margin-bottom: 35px; 
-    padding-left: 5px; 
+
+  .pub-list li {
+    margin-bottom: 35px;
+    padding-left: 5px;
   }
-  
-  .paper-title { 
-    font-weight: 700; 
-    color: var(--port-primary); 
-    display: block; 
-    margin: 0 0 6px 0; 
-    font-size: 1.05em; 
+
+  .paper-title {
+    font-weight: 700;
+    color: var(--port-primary);
+    display: block;
+    margin: 0 0 6px 0;
+    font-size: 1.05em;
     line-height: 1.4;
   }
 
-  .authors-list { 
-    font-size: 0.9em; 
-    color: var(--port-muted); 
-    margin-bottom: 12px; 
+  .authors-list {
+    font-size: 0.9em;
+    color: var(--port-muted);
+    margin-bottom: 12px;
   }
 
-  /* Interactive Toolbar */
-  .paper-meta { 
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: center; 
-    gap: 10px; 
-    margin-top: 8px; 
+  /* =========================================
+     5. PUBLICATION BUTTONS
+     ========================================= */
+  .paper-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
   }
 
-  .meta-btn, .impact-badge {
-    cursor: pointer; 
-    font-size: 0.75em; 
-    font-weight: 600; 
+  .meta-btn,
+  .impact-badge {
+    cursor: pointer;
+    font-size: 0.75em;
+    font-weight: 600;
     border-radius: 4px;
     padding: 4px 10px;
-    transition: all 0.2s ease; 
+    transition: all 0.2s ease;
     display: inline-block;
     letter-spacing: 0.03em;
   }
 
-  /* Toolbar Button Styles */
-  .venue-btn { background-color: var(--port-primary); color: #ffffff; border: 1px solid var(--port-primary); }
-  .impact-badge { background-color: var(--port-bg); color: var(--port-primary); border: 1px solid var(--port-border); cursor: default; }
-  .doi-btn { background-color: #f0f7ff; color: #3172b4; border: 1px solid #d0e3f7; }
-  .abstract-btn { background-color: var(--port-bg); color: var(--port-muted); border: 1px solid var(--port-border); text-transform: uppercase; }
-  .abstract-btn:hover { background-color: var(--port-primary); color: #ffffff; border-color: var(--port-primary); }
+  .venue-btn {
+    background-color: var(--port-primary);
+    color: #ffffff !important;
+    border: 1px solid var(--port-primary);
+  }
 
-  /* Info Boxes (Abstract Dropdowns) */
+  .impact-badge {
+    background-color: var(--port-bg);
+    color: var(--port-primary);
+    border: 1px solid var(--port-border);
+    cursor: default;
+  }
+
+  .doi-btn {
+    background-color: #f0f7ff;
+    color: #3172b4 !important;
+    border: 1px solid #d0e3f7;
+    text-decoration: none !important;
+  }
+
+  .doi-btn:hover {
+    background-color: #e4f1fc;
+  }
+
+  .abstract-btn {
+    background-color: var(--port-bg);
+    color: var(--port-muted);
+    border: 1px solid var(--port-border);
+    text-transform: uppercase;
+  }
+
+  .abstract-btn:hover {
+    background-color: var(--port-primary);
+    color: #ffffff;
+    border-color: var(--port-primary);
+  }
+
+  /* =========================================
+     6. ABSTRACT BOX
+     ========================================= */
   .info-box {
-    display: none; 
-    margin-top: 15px; 
-    font-size: 0.95em; 
+    display: none;
+    margin-top: 15px;
+    font-size: 0.95em;
     padding: 16px 20px;
-    background: var(--port-bg); 
-    border-left: 3px solid var(--port-primary); 
+    background: var(--port-bg);
+    border-left: 3px solid var(--port-primary);
     border-radius: 0 4px 4px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03); 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     border-top: 1px solid var(--port-border);
     border-right: 1px solid var(--port-border);
     border-bottom: 1px solid var(--port-border);
   }
-  
-  .info-box p { 
-    text-align: justify !important; 
+
+  .info-box p {
+    text-align: justify !important;
     text-justify: inter-word !important;
     line-height: 1.7 !important;
-    margin: 0 0 12px 0; 
+    margin: 0;
     color: var(--port-text);
   }
-  .info-box p:last-child { margin-bottom: 0; }
-  .badge-wrap { display: inline-block; vertical-align: middle; margin-top: -2px; }
 
-  @media (max-width: 768px) { 
-    .pub-list { font-size: 0.95em; padding-left: 15px; } 
-    .pub-list li { margin-bottom: 30px; }
-    .paper-title { font-size: 1em; }
-    .meta-btn, .impact-badge { padding: 4px 8px; font-size: 0.7em; }
-    .info-box { padding: 14px 16px; }
+  /* =========================================
+     7. RESPONSIVE
+     ========================================= */
+  @media (max-width: 768px) {
+
+    .pub-list {
+      font-size: 0.95em;
+      padding-left: 15px;
+    }
+
+    .pub-list li {
+      margin-bottom: 30px;
+    }
+
+    .paper-title {
+      font-size: 1em;
+    }
+
+    .meta-btn,
+    .impact-badge {
+      padding: 4px 8px;
+      font-size: 0.7em;
+    }
+
+    .info-box {
+      padding: 14px 16px;
+    }
   }
 </style>
 
+
 {% if site.author.googlescholar %}
-  <div class="collab-box" style="background-color: #f8fbfd;">
-    You can also find my articles with the latest citations on <a href="#" style="color:#3172b4; text-decoration:underline; font-weight:600;">my Google Scholar profile</a>.
+  <div class="collab-box">
+    You can also find my articles with the latest citations on
+    <a href="{{ site.author.googlescholar }}"
+       style="color:#3172b4; text-decoration:underline; font-weight:600;">
+      my Google Scholar profile
+    </a>.
   </div>
 {% endif %}
 
+
 {% include base_path %}
+
+
+<!-- =========================================================
+     JOURNAL ARTICLES
+     ========================================================= -->
 
 <h2 class="pub-section-title">Journal Articles</h2>
 
 <ol class="pub-list">
+
   {% assign journal_articles = site.publications
     | where: "category", "manuscripts"
     | sort: "date"
     | reverse %}
 
   {% for post in journal_articles %}
+
   <li>
+
     <span class="paper-title">
       {{ post.title }}
     </span>
 
     {% if post.authors %}
-    <div class="authors-list">
-      {{ post.authors }}
-    </div>
+      <div class="authors-list">
+        {{ post.authors }}
+      </div>
     {% endif %}
 
-    {% if post.venue %}
     <div class="paper-meta">
-      <span class="meta-btn venue-btn">
-        {{ post.venue }}
-      </span>
+
+      {% if post.venue %}
+        <span class="meta-btn venue-btn">
+          {{ post.venue }}
+        </span>
+      {% endif %}
 
       {% if post.paperurl %}
-      <a class="meta-btn" href="{{ post.paperurl }}" target="_blank" rel="noopener">
-        DOI
-      </a>
+        <a class="meta-btn doi-btn"
+           href="{{ post.paperurl }}"
+           target="_blank"
+           rel="noopener">
+          DOI
+        </a>
       {% endif %}
+
+      {% if post.abstract %}
+        <button type="button"
+                class="meta-btn abstract-btn">
+          Abstract
+        </button>
+      {% endif %}
+
     </div>
+
+
+    {% if post.abstract %}
+      <div class="info-box abstract-info">
+        <p>
+          {{ post.abstract }}
+        </p>
+      </div>
     {% endif %}
+
   </li>
+
   {% endfor %}
+
 </ol>
+
+
+<!-- =========================================================
+     CONFERENCE PROCEEDINGS
+     ========================================================= -->
 
 <h2 class="pub-section-title">Conference Proceedings</h2>
 
 <ol class="pub-list">
+
   {% assign conference_papers = site.publications
     | where: "category", "conferences"
     | sort: "date"
     | reverse %}
 
   {% for post in conference_papers %}
+
   <li>
+
     <span class="paper-title">
       {{ post.title }}
     </span>
 
     {% if post.authors %}
-    <div class="authors-list">
-      {{ post.authors }}
-    </div>
+      <div class="authors-list">
+        {{ post.authors }}
+      </div>
     {% endif %}
 
-    {% if post.venue %}
     <div class="paper-meta">
-      <span class="meta-btn venue-btn">
-        {{ post.venue }}
-      </span>
+
+      {% if post.venue %}
+        <span class="meta-btn venue-btn">
+          {{ post.venue }}
+        </span>
+      {% endif %}
 
       {% if post.paperurl %}
-      <a class="meta-btn" href="{{ post.paperurl }}" target="_blank" rel="noopener">
-        DOI
-      </a>
+        <a class="meta-btn doi-btn"
+           href="{{ post.paperurl }}"
+           target="_blank"
+           rel="noopener">
+          DOI
+        </a>
       {% endif %}
+
+      {% if post.abstract %}
+        <button type="button"
+                class="meta-btn abstract-btn">
+          Abstract
+        </button>
+      {% endif %}
+
     </div>
+
+
+    {% if post.abstract %}
+      <div class="info-box abstract-info">
+        <p>
+          {{ post.abstract }}
+        </p>
+      </div>
     {% endif %}
+
   </li>
+
   {% endfor %}
+
 </ol>
 
 
-<!--
-<h2 class="pub-section-title">Book Chapters</h2>
-<ol class="pub-list">
-  <li>
-    <span class="paper-title">The Role of Artificial Intelligence in Climate Adaptation Strategies.</span>
-    <div class="authors-list">Taylor, M., Doe, J., (2023).</div>
-    <div class="paper-meta">
-      <span class="meta-btn venue-btn" data-full="Handbook of Computational Sustainability, Springer.">Springer '23</span>
-      <span class="impact-badge">Springer</span>
-      <span class="meta-btn abstract-btn">Summary</span>
-      <span class="meta-btn doi-btn" data-full="#">DOI</span>
-    </div>
-    <div class="info-box details-info"></div>
-    <div class="info-box abstract-info">
-      <p><strong>Chapter Summary:</strong> This chapter provides a comprehensive overview of how machine learning and artificial intelligence are being deployed to address critical challenges in climate adaptation. We explore specific use cases ranging from precision agriculture and water resource management to the prediction of extreme weather events.</p>
-      <p>A significant portion of the chapter focuses on the transition from reactive disaster response to predictive modeling. We detail the foundational algorithms used in environmental data science, including time-series forecasting and spatial-temporal neural networks, emphasizing the importance of open data initiatives in accelerating global sustainability efforts.</p>
-    </div>
-  </li>
-</ol>
--->
+<!-- =========================================================
+     UNDER REVISION
+     ========================================================= -->
 
 <h2 class="pub-section-title">Under Revision</h2>
+
 <ol class="pub-list">
-  {% for post in site.publications %}
-    {% if post.category == "under_revision" %}
-      <li>
-        <span class="paper-title">{{ post.title }}</span>
 
-        <div class="authors-list">
-          {{ post.authors }}
-        </div>
+  {% assign under_revision = site.publications
+    | where: "category", "under_revision"
+    | sort: "date"
+    | reverse %}
 
-        <div class="paper-meta">
-          <span class="meta-btn venue-btn">
-            {{ post.venue }}
-          </span>
-          <span class="impact-badge">
-            Under Revision
-          </span>
-        </div>
-      </li>
+  {% for post in under_revision %}
+
+  <li>
+
+    <span class="paper-title">
+      {{ post.title }}
+    </span>
+
+    {% if post.authors %}
+      <div class="authors-list">
+        {{ post.authors }}
+      </div>
     {% endif %}
+
+    <div class="paper-meta">
+
+      {% if post.venue %}
+        <span class="meta-btn venue-btn">
+          {{ post.venue }}
+        </span>
+      {% endif %}
+
+      <span class="impact-badge">
+        Under Revision
+      </span>
+
+      {% if post.abstract %}
+        <button type="button"
+                class="meta-btn abstract-btn">
+          Abstract
+        </button>
+      {% endif %}
+
+    </div>
+
+
+    {% if post.abstract %}
+      <div class="info-box abstract-info">
+        <p>
+          {{ post.abstract }}
+        </p>
+      </div>
+    {% endif %}
+
+  </li>
+
   {% endfor %}
+
 </ol>
 
+
+<!-- =========================================================
+     ABSTRACT INTERACTION
+     ========================================================= -->
+
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.meta-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const parent = this.closest('li');
-        const detailsBox = parent.querySelector('.details-info');
-        const abstractBox = parent.querySelector('.abstract-info');
-        
-        if (this.classList.contains('venue-btn') || this.classList.contains('doi-btn')) {
-          abstractBox.style.display = "none";
-          const isDoi = this.classList.contains('doi-btn');
-          const content = this.getAttribute('data-full');
-          const html = isDoi ? `<strong>Link:</strong> <a href="${content}" target="_blank" style="color:#3172b4; text-decoration:underline;">${content}</a>` : `<strong>Venue:</strong> ${content}`;
-          
-          if (detailsBox.style.display === "block" && detailsBox.innerHTML === html) {
-            detailsBox.style.display = "none";
-          } else {
-            detailsBox.innerHTML = html;
-            detailsBox.style.display = "block";
-          }
-        } 
-        else if (this.classList.contains('abstract-btn')) {
-          detailsBox.style.display = "none";
-          abstractBox.style.display = (abstractBox.style.display === "block") ? "none" : "block";
-        }
-      });
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".abstract-btn").forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      const parent = this.closest("li");
+      const abstractBox = parent.querySelector(".abstract-info");
+
+      if (!abstractBox) {
+        return;
+      }
+
+      if (abstractBox.style.display === "block") {
+        abstractBox.style.display = "none";
+        this.textContent = "Abstract";
+      } else {
+        abstractBox.style.display = "block";
+        this.textContent = "Hide Abstract";
+      }
+
     });
+
   });
+
+});
 </script>
