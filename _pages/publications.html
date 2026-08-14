@@ -9,6 +9,7 @@ author_profile: false
   /* =========================================
      1. STATIC LIGHT THEME VARIABLES
      ========================================= */
+
   :root {
     --port-primary: #2c3e50;
     --port-text: #3b3b3b;
@@ -17,9 +18,11 @@ author_profile: false
     --port-border: #eaeaea;
   }
 
+
   /* =========================================
-     2. GLOBAL HEADER FIXES
+     2. GLOBAL HEADER
      ========================================= */
+
   .masthead,
   .masthead__inner-wrap,
   .masthead__menu,
@@ -61,9 +64,11 @@ author_profile: false
     font-weight: 700 !important;
   }
 
+
   /* =========================================
-     3. GOOGLE SCHOLAR / COLLABORATION BOX
+     3. GOOGLE SCHOLAR BOX
      ========================================= */
+
   .collab-box {
     background-color: #f8fbfd;
     border-left: 4px solid var(--port-primary);
@@ -77,9 +82,11 @@ author_profile: false
     line-height: 1.6;
   }
 
+
   /* =========================================
      4. PUBLICATIONS LAYOUT
      ========================================= */
+
   .pub-section-title {
     margin-top: 45px;
     border-bottom: 1px solid var(--port-border);
@@ -119,9 +126,11 @@ author_profile: false
     margin-bottom: 12px;
   }
 
+
   /* =========================================
      5. PUBLICATION BUTTONS
      ========================================= */
+
   .paper-meta {
     display: flex;
     flex-wrap: wrap;
@@ -144,8 +153,12 @@ author_profile: false
 
   .venue-btn {
     background-color: var(--port-primary);
-    color: #ffffff !important;
+    color: #ffffff;
     border: 1px solid var(--port-primary);
+  }
+
+  .venue-btn:hover {
+    opacity: 0.9;
   }
 
   .impact-badge {
@@ -157,13 +170,13 @@ author_profile: false
 
   .doi-btn {
     background-color: #f0f7ff;
-    color: #3172b4 !important;
+    color: #3172b4;
     border: 1px solid #d0e3f7;
-    text-decoration: none !important;
+    text-decoration: none;
   }
 
   .doi-btn:hover {
-    background-color: #e4f1fc;
+    background-color: #e5f1fc;
   }
 
   .abstract-btn {
@@ -179,9 +192,11 @@ author_profile: false
     border-color: var(--port-primary);
   }
 
+
   /* =========================================
-     6. ABSTRACT BOX
+     6. INFORMATION / ABSTRACT BOXES
      ========================================= */
+
   .info-box {
     display: none;
     margin-top: 15px;
@@ -200,13 +215,19 @@ author_profile: false
     text-align: justify !important;
     text-justify: inter-word !important;
     line-height: 1.7 !important;
-    margin: 0;
+    margin: 0 0 12px 0;
     color: var(--port-text);
   }
 
+  .info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+
   /* =========================================
-     7. RESPONSIVE
+     7. MOBILE
      ========================================= */
+
   @media (max-width: 768px) {
 
     .pub-list {
@@ -235,11 +256,17 @@ author_profile: false
 </style>
 
 
+<!-- =========================================
+     GOOGLE SCHOLAR
+     ========================================= -->
+
 {% if site.author.googlescholar %}
   <div class="collab-box">
     You can also find my articles with the latest citations on
     <a href="{{ site.author.googlescholar }}"
-       style="color:#3172b4; text-decoration:underline; font-weight:600;">
+       style="color:#3172b4; text-decoration:underline; font-weight:600;"
+       target="_blank"
+       rel="noopener">
       my Google Scholar profile
     </a>.
   </div>
@@ -249,9 +276,9 @@ author_profile: false
 {% include base_path %}
 
 
-<!-- =========================================================
+<!-- =========================================
      JOURNAL ARTICLES
-     ========================================================= -->
+     ========================================= -->
 
 <h2 class="pub-section-title">Journal Articles</h2>
 
@@ -264,63 +291,86 @@ author_profile: false
 
   {% for post in journal_articles %}
 
-  <li>
+    {% unless post.path contains "/old/" %}
 
-    <span class="paper-title">
-      {{ post.title }}
-    </span>
+      <li>
 
-    {% if post.authors %}
-      <div class="authors-list">
-        {{ post.authors }}
-      </div>
-    {% endif %}
-
-    <div class="paper-meta">
-
-      {% if post.venue %}
-        <span class="meta-btn venue-btn">
-          {{ post.venue }}
+        <span class="paper-title">
+          {{ post.title }}
         </span>
-      {% endif %}
 
-      {% if post.paperurl %}
-        <a class="meta-btn doi-btn"
-           href="{{ post.paperurl }}"
-           target="_blank"
-           rel="noopener">
-          DOI
-        </a>
-      {% endif %}
+        {% if post.authors %}
+          <div class="authors-list">
+            {{ post.authors }}
+          </div>
+        {% endif %}
 
-      {% if post.abstract %}
-        <button type="button"
-                class="meta-btn abstract-btn">
-          Abstract
-        </button>
-      {% endif %}
+        {% if post.venue or post.paperurl or post.abstract %}
 
-    </div>
+          <div class="paper-meta">
+
+            {% if post.venue %}
+              <span
+                class="meta-btn venue-btn"
+                data-full="{{ post.venue | escape }}">
+                {{ post.venue }}
+              </span>
+            {% endif %}
 
 
-    {% if post.abstract %}
-      <div class="info-box abstract-info">
-        <p>
-          {{ post.abstract }}
-        </p>
-      </div>
-    {% endif %}
+            {% if post.abstract %}
+              <span class="meta-btn abstract-btn">
+                Abstract
+              </span>
+            {% endif %}
 
-  </li>
+
+            {% if post.paperurl %}
+              <a
+                class="meta-btn doi-btn"
+                href="{{ post.paperurl }}"
+                target="_blank"
+                rel="noopener">
+                DOI
+              </a>
+            {% endif %}
+
+          </div>
+
+
+          <!-- Venue information -->
+
+          {% if post.venue %}
+            <div class="info-box details-info"></div>
+          {% else %}
+            <div class="info-box details-info"></div>
+          {% endif %}
+
+
+          <!-- Abstract -->
+
+          {% if post.abstract %}
+            <div class="info-box abstract-info">
+              <p>
+                {{ post.abstract }}
+              </p>
+            </div>
+          {% endif %}
+
+        {% endif %}
+
+      </li>
+
+    {% endunless %}
 
   {% endfor %}
 
 </ol>
 
 
-<!-- =========================================================
+<!-- =========================================
      CONFERENCE PROCEEDINGS
-     ========================================================= -->
+     ========================================= -->
 
 <h2 class="pub-section-title">Conference Proceedings</h2>
 
@@ -333,63 +383,124 @@ author_profile: false
 
   {% for post in conference_papers %}
 
-  <li>
+    {% unless post.path contains "/old/" %}
 
-    <span class="paper-title">
-      {{ post.title }}
-    </span>
+      <li>
 
-    {% if post.authors %}
-      <div class="authors-list">
-        {{ post.authors }}
-      </div>
-    {% endif %}
-
-    <div class="paper-meta">
-
-      {% if post.venue %}
-        <span class="meta-btn venue-btn">
-          {{ post.venue }}
+        <span class="paper-title">
+          {{ post.title }}
         </span>
-      {% endif %}
 
-      {% if post.paperurl %}
-        <a class="meta-btn doi-btn"
-           href="{{ post.paperurl }}"
-           target="_blank"
-           rel="noopener">
-          DOI
-        </a>
-      {% endif %}
-
-      {% if post.abstract %}
-        <button type="button"
-                class="meta-btn abstract-btn">
-          Abstract
-        </button>
-      {% endif %}
-
-    </div>
+        {% if post.authors %}
+          <div class="authors-list">
+            {{ post.authors }}
+          </div>
+        {% endif %}
 
 
-    {% if post.abstract %}
-      <div class="info-box abstract-info">
-        <p>
-          {{ post.abstract }}
-        </p>
-      </div>
-    {% endif %}
+        {% if post.venue or post.paperurl or post.abstract %}
 
-  </li>
+          <div class="paper-meta">
+
+            {% if post.venue %}
+              <span
+                class="meta-btn venue-btn"
+                data-full="{{ post.venue | escape }}">
+                {{ post.venue }}
+              </span>
+            {% endif %}
+
+
+            {% if post.abstract %}
+              <span class="meta-btn abstract-btn">
+                Abstract
+              </span>
+            {% endif %}
+
+
+            {% if post.paperurl %}
+              <a
+                class="meta-btn doi-btn"
+                href="{{ post.paperurl }}"
+                target="_blank"
+                rel="noopener">
+                DOI
+              </a>
+            {% endif %}
+
+          </div>
+
+
+          <!-- Venue information -->
+
+          <div class="info-box details-info"></div>
+
+
+          <!-- Abstract -->
+
+          {% if post.abstract %}
+            <div class="info-box abstract-info">
+              <p>
+                {{ post.abstract }}
+              </p>
+            </div>
+          {% endif %}
+
+        {% endif %}
+
+      </li>
+
+    {% endunless %}
 
   {% endfor %}
 
 </ol>
 
 
-<!-- =========================================================
+<!-- =========================================
+     OLD / UNUSED SECTIONS
+     Kept commented intentionally.
+     ========================================= -->
+
+<!--
+
+<h2 class="pub-section-title">Book Chapters</h2>
+
+<ol class="pub-list">
+
+  <li>
+    <span class="paper-title">
+      Example Book Chapter
+    </span>
+
+    <div class="authors-list">
+      Author, A., Author, B. (2024).
+    </div>
+
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn">
+        Publisher
+      </span>
+
+      <span class="meta-btn abstract-btn">
+        Abstract
+      </span>
+
+      <a class="meta-btn doi-btn" href="#">
+        DOI
+      </a>
+    </div>
+
+  </li>
+
+</ol>
+
+-->
+
+
+<!-- =========================================
      UNDER REVISION
-     ========================================================= -->
+     ========================================= -->
 
 <h2 class="pub-section-title">Under Revision</h2>
 
@@ -402,84 +513,168 @@ author_profile: false
 
   {% for post in under_revision %}
 
-  <li>
+    {% unless post.path contains "/old/" %}
 
-    <span class="paper-title">
-      {{ post.title }}
-    </span>
+      <li>
 
-    {% if post.authors %}
-      <div class="authors-list">
-        {{ post.authors }}
-      </div>
-    {% endif %}
-
-    <div class="paper-meta">
-
-      {% if post.venue %}
-        <span class="meta-btn venue-btn">
-          {{ post.venue }}
+        <span class="paper-title">
+          {{ post.title }}
         </span>
-      {% endif %}
 
-      <span class="impact-badge">
-        Under Revision
-      </span>
-
-      {% if post.abstract %}
-        <button type="button"
-                class="meta-btn abstract-btn">
-          Abstract
-        </button>
-      {% endif %}
-
-    </div>
+        {% if post.authors %}
+          <div class="authors-list">
+            {{ post.authors }}
+          </div>
+        {% endif %}
 
 
-    {% if post.abstract %}
-      <div class="info-box abstract-info">
-        <p>
-          {{ post.abstract }}
-        </p>
-      </div>
-    {% endif %}
+        <div class="paper-meta">
 
-  </li>
+          {% if post.venue %}
+            <span
+              class="meta-btn venue-btn"
+              data-full="{{ post.venue | escape }}">
+              {{ post.venue }}
+            </span>
+          {% endif %}
+
+
+          <span class="impact-badge">
+            Under Revision
+          </span>
+
+
+          {% if post.abstract %}
+            <span class="meta-btn abstract-btn">
+              Abstract
+            </span>
+          {% endif %}
+
+
+          {% if post.paperurl %}
+            <a
+              class="meta-btn doi-btn"
+              href="{{ post.paperurl }}"
+              target="_blank"
+              rel="noopener">
+              DOI
+            </a>
+          {% endif %}
+
+        </div>
+
+
+        <!-- Venue information -->
+
+        <div class="info-box details-info"></div>
+
+
+        <!-- Abstract -->
+
+        {% if post.abstract %}
+          <div class="info-box abstract-info">
+            <p>
+              {{ post.abstract }}
+            </p>
+          </div>
+        {% endif %}
+
+      </li>
+
+    {% endunless %}
 
   {% endfor %}
 
 </ol>
 
 
-<!-- =========================================================
-     ABSTRACT INTERACTION
-     ========================================================= -->
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function() {
 
-  document.querySelectorAll(".abstract-btn").forEach(function (button) {
+    document.querySelectorAll('.meta-btn').forEach(function(btn) {
 
-    button.addEventListener("click", function () {
+      btn.addEventListener('click', function() {
 
-      const parent = this.closest("li");
-      const abstractBox = parent.querySelector(".abstract-info");
+        const parent = this.closest('li');
 
-      if (!abstractBox) {
-        return;
-      }
+        if (!parent) {
+          return;
+        }
 
-      if (abstractBox.style.display === "block") {
-        abstractBox.style.display = "none";
-        this.textContent = "Abstract";
-      } else {
-        abstractBox.style.display = "block";
-        this.textContent = "Hide Abstract";
-      }
+        const detailsBox = parent.querySelector('.details-info');
+        const abstractBox = parent.querySelector('.abstract-info');
+
+
+        /* -----------------------------------------
+           VENUE
+           ----------------------------------------- */
+
+        if (this.classList.contains('venue-btn')) {
+
+          if (!detailsBox) {
+            return;
+          }
+
+          if (abstractBox) {
+            abstractBox.style.display = "none";
+          }
+
+          const content = this.getAttribute('data-full');
+
+          const html =
+            '<strong>Venue:</strong> ' + content;
+
+
+          if (
+            detailsBox.style.display === "block" &&
+            detailsBox.innerHTML === html
+          ) {
+
+            detailsBox.style.display = "none";
+
+          } else {
+
+            detailsBox.innerHTML = html;
+            detailsBox.style.display = "block";
+
+          }
+
+        }
+
+
+        /* -----------------------------------------
+           ABSTRACT
+           ----------------------------------------- */
+
+        else if (this.classList.contains('abstract-btn')) {
+
+          if (!abstractBox) {
+            return;
+          }
+
+          if (detailsBox) {
+            detailsBox.style.display = "none";
+          }
+
+          if (abstractBox.style.display === "block") {
+
+            abstractBox.style.display = "none";
+
+          } else {
+
+            abstractBox.style.display = "block";
+
+          }
+
+        }
+
+      });
 
     });
 
   });
-
-});
 </script>

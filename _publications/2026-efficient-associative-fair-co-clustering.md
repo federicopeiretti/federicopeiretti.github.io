@@ -1,5 +1,5 @@
 ---
-title: "An efficient associative approach to fair co-clustering"
+title: "An Efficient Associative Approach to Fair Co-Clustering"
 collection: publications
 category: under_revision
 permalink: /publication/2026-efficient-associative-fair-co-clustering
