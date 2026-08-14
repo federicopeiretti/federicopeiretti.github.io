@@ -5,7 +5,7 @@ category: under_revision
 permalink: /publication/2026-efficient-associative-fair-co-clustering
 date: 2026-01-01
 venue: "Data Mining and Knowledge Discovery"
-authors: "Federico Peiretti, Ruggero G. Pensa"
+authors: "Peiretti, F., & Pensa, R. G. (2026)"
 ---
 
 **Authors:** Federico Peiretti, Ruggero G. Pensa
