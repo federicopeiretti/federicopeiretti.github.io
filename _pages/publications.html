@@ -185,20 +185,76 @@ author_profile: false
 {% include base_path %}
 
 <h2 class="pub-section-title">Journal Articles</h2>
+
 <ol class="pub-list">
-  {% for post in site.publications %}
-    {% if post.category == "manuscripts" %}
-      ...
+  {% assign journal_articles = site.publications
+    | where: "category", "manuscripts"
+    | sort: "date"
+    | reverse %}
+
+  {% for post in journal_articles %}
+  <li>
+    <span class="paper-title">
+      {{ post.title }}
+    </span>
+
+    {% if post.authors %}
+    <div class="authors-list">
+      {{ post.authors }}
+    </div>
     {% endif %}
+
+    {% if post.venue %}
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn">
+        {{ post.venue }}
+      </span>
+
+      {% if post.paperurl %}
+      <a class="meta-btn" href="{{ post.paperurl }}" target="_blank" rel="noopener">
+        DOI
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </li>
   {% endfor %}
 </ol>
 
 <h2 class="pub-section-title">Conference Proceedings</h2>
+
 <ol class="pub-list">
-  {% for post in site.publications %}
-    {% if post.category == "conferences" %}
-      ...
+  {% assign conference_papers = site.publications
+    | where: "category", "conferences"
+    | sort: "date"
+    | reverse %}
+
+  {% for post in conference_papers %}
+  <li>
+    <span class="paper-title">
+      {{ post.title }}
+    </span>
+
+    {% if post.authors %}
+    <div class="authors-list">
+      {{ post.authors }}
+    </div>
     {% endif %}
+
+    {% if post.venue %}
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn">
+        {{ post.venue }}
+      </span>
+
+      {% if post.paperurl %}
+      <a class="meta-btn" href="{{ post.paperurl }}" target="_blank" rel="noopener">
+        DOI
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </li>
   {% endfor %}
 </ol>
 
