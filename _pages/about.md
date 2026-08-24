@@ -185,19 +185,27 @@ redirect_from:
 </style>
 
 <div class="content-text">
-  I'm a Research Fellow at Dept. of Computer Science, University of Torino (Italy).
+  I'm Research Fellow at Dept. of Computer Science, University of Turin (Italy). 
 </div>
 
 <div class="content-text">
-  I hold a Ph.D. in Computer Science from the University of Turin, where I defended my thesis, <em>"Fair Associative Co-clustering,"</em> on July 23, 2026. During my Ph.D., I worked on Machine Learning and Responsible AI, with a particular focus on algorithmic fairness in co-clustering sparse and high-dimensional data.
+  I'm Contract Lecturer in Master's programmes, where I teach courses on topics related to privacy-preserving data analysis, algorithmic fairness, and database. I'm Co-Supervisor of Bachelor's and Master's theses in Computer Science. From 2022 to 2026, I was Ph.D. Student Representative in the Department Council and Ph.D. Board at the Dept. of Computer Science. From 2024 to 2026, I was member of the Ph.D. Programme Monitoring and Review Committee at the Dept. of Computer Science.
 </div>
 
 <div class="content-text">
-  My research interests include <strong>machine learning</strong>, <strong>data mining</strong>, <strong>responsible and trustworthy AI</strong>, and <strong>social network analysis</strong>. I contributed to the <strong>Social4School</strong> project, which aimed to raise awareness of privacy and responsible social media use among school students. I have also worked on machine learning and deep learning approaches for <strong>food fraud detection and food safety</strong>, with a focus on spectroscopic data analysis.
+  I hold Ph.D. in Computer Science from the University of Turin, where I defended my thesis, <em>"Fair Associative Co-clustering"</em> on July 2026. During my Ph.D., I worked on Machine Learning and Responsible AI, with a particular focus on algorithmic fairness in co-clustering sparse and high-dimensional data.
 </div>
 
 <div class="content-text">
-  I'm member of the Machine Learning and Data Mining group (Dept. of Computer Science, University of Torino). I'm <strong>Contract Lecturer</strong> in Master's programmes, where I teach courses on topics related to privacy-preserving data analysis, algorithmic fairness, and database. I'm co-supervisor of Bachelor's and Master's theses in Computer Science. During my Ph.D., I served as a Ph.D. Student Representative in the Department Council and Ph.D. Board, and as a member of the Ph.D. Programme Monitoring and Review Committee at the Dept. of Computer Science (University of Turin).
+  My research interests include <strong>machine learning</strong>, <strong>data mining</strong>, <strong>responsible and trustworthy AI</strong>, and <strong>social network analysis</strong>.
+</div> 
+
+<!-->
+  I contributed to the <strong>Social4School</strong> project, which aimed to raise awareness of privacy and responsible social media use among school students. I have also worked on machine learning and deep learning approaches for <strong>food fraud detection and food safety</strong>, with a focus on spectroscopic data analysis.
+<!-->
+
+<div class="content-text">
+  I'm member of the Machine Learning and Data Mining group (Dept. of Computer Science, University of Torino). 
 </div>
 
 <!--<div class="collab-box" style="text-align: justify; text-justify: inter-word;">
@@ -208,7 +216,7 @@ redirect_from:
 <div class="interest-pills">
   <span class="pill">Machine Learning</span>
   <span class="pill">Data Mining</span>
-  <span class="pill">Responsible AI</span>
+  <span class="pill">Responsible and Trustworthy AI</span>
   <span class="pill">Social Network Analysis</span>
 </div>
 
