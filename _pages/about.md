@@ -200,10 +200,6 @@ redirect_from:
   My research interests include <strong>machine learning</strong>, <strong>data mining</strong>, <strong>responsible and trustworthy AI</strong>, and <strong>social network analysis</strong>.
 </div> 
 
-<!-->
-  I contributed to the <strong>Social4School</strong> project, which aimed to raise awareness of privacy and responsible social media use among school students. I have also worked on machine learning and deep learning approaches for <strong>food fraud detection and food safety</strong>, with a focus on spectroscopic data analysis.
-<!-->
-
 <div class="content-text">
   I'm member of the Machine Learning and Data Mining group (Dept. of Computer Science, University of Torino). 
 </div>
