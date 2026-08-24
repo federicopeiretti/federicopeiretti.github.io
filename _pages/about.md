@@ -185,23 +185,23 @@ redirect_from:
 </style>
 
 <div class="content-text">
-  I'm Research Fellow at Dept. of Computer Science, University of Turin (Italy). 
+  I'm a Research Fellow in the Department of Computer Science at the University of Turin (Italy) and a member of the Machine Learning and Data Mining group.
 </div>
 
 <div class="content-text">
-  I'm Contract Lecturer in Master's programmes, where I teach courses on topics related to privacy-preserving data analysis, algorithmic fairness, and database. I'm Co-Supervisor of Bachelor's and Master's theses in Computer Science. From 2022 to 2026, I was Ph.D. Student Representative in the Department Council and Ph.D. Board at the Dept. of Computer Science. From 2024 to 2026, I was member of the Ph.D. Programme Monitoring and Review Committee at the Dept. of Computer Science.
+  I'm a Contract Lecturer in Master's programmes, where I teach courses on topics related to privacy-preserving data analysis, algorithmic fairness, and database systems. I'm also a Co-Supervisor of Bachelor's and Master's theses in Computer Science.
 </div>
 
 <div class="content-text">
-  I hold Ph.D. in Computer Science from the University of Turin, where I defended my thesis, <em>"Fair Associative Co-clustering"</em> on July 2026. During my Ph.D., I worked on Machine Learning and Responsible AI, with a particular focus on algorithmic fairness in co-clustering sparse and high-dimensional data.
+  I hold a Ph.D. in Computer Science from the University of Turin, where I defended my thesis, <em>"Fair Associative Co-clustering,"</em> on July 23, 2026. During my Ph.D., I worked on Machine Learning and Responsible AI, with a particular focus on algorithmic fairness in co-clustering sparse and high-dimensional data.
 </div>
 
 <div class="content-text">
   My research interests include <strong>machine learning</strong>, <strong>data mining</strong>, <strong>responsible and trustworthy AI</strong>, and <strong>social network analysis</strong>.
-</div> 
+</div>
 
 <div class="content-text">
-  I'm member of the Machine Learning and Data Mining group (Dept. of Computer Science, University of Torino). 
+  From 2022 to 2026, I served as a Ph.D. Student Representative in the Department Council and Ph.D. Board at Dept. of Computer Science (University of Turin). From 2024 to 2026, I was a member of the Ph.D. Programme Monitoring and Review Committee at Dept. of Computer Science (University of Turin).
 </div>
 
 <!--<div class="collab-box" style="text-align: justify; text-justify: inter-word;">
