@@ -185,24 +185,31 @@ redirect_from:
 </style>
 
 <div class="content-text">
-  <strong>John Doe</strong> is a fully funded Ph.D. researcher in Environmental Data Science at the <strong>University of Earth Sciences</strong>, advised by <strong>Dr. Jane Smith</strong> in the <strong>Climate Analytics Lab</strong>. His research applies Machine Learning and Spatial-Temporal Neural Networks to predictive climate modeling. Currently, he develops deep learning architectures to build AI-driven urban planning tools for <strong>Urban Heat Island (UHI) mitigation</strong>. Through multi-institutional collaborations, his work aims to translate environmental algorithms into scalable solutions for municipal governments and sustainability NGOs.
+  I'm a Research Fellow at Dept. of Computer Science, University of Torino (Italy).
 </div>
 
 <div class="content-text">
-  Doe’s multidisciplinary foundation includes an M.Sc. in Geospatial Analytics, and a B.Sc. in Environmental Engineering. He is an inductee of the <strong>Global Sustainability Honor Society</strong> and recipient of the <strong>Green Earth Memorial Award</strong>. His research addressing real-world climate challenges is widely published in peer-reviewed venues indexed across <strong>IEEE Xplore</strong>, the <strong>ACM Digital Library</strong>, and <strong>Springer</strong>.
+  I hold a Ph.D. in Computer Science from the University of Turin, where I defended my thesis, <em>"Fair Associative Co-clustering,"</em> on July 23, 2026. During my Ph.D., I worked on Machine Learning and Responsible AI, with a particular focus on algorithmic fairness in co-clustering sparse and high-dimensional data.
 </div>
 
-<div class="collab-box" style="text-align: justify; text-justify: inter-word;">
-  <i class="fas fa-lightbulb" style="color: #64748b; margin-right: 8px;"></i> I am actively seeking collaborative research opportunities to contribute to environmental science.
+<div class="content-text">
+  My research interests include <strong>machine learning</strong>, <strong>data mining</strong>, <strong>responsible and trustworthy AI</strong>, and <strong>social network analysis</strong>. I contributed to the <strong>Social4School</strong> project, which aimed to raise awareness of privacy and responsible social media use among school students. I have also worked on machine learning and deep learning approaches for <strong>food fraud detection and food safety</strong>, with a focus on spectroscopic data analysis.
 </div>
+
+<div class="content-text">
+  I'm member of the Machine Learning and Data Mining group (Dept. of Computer Science, University of Torino). I'm <strong>Contract Lecturer</strong> in Master's programmes, where I teach courses on topics related to privacy-preserving data analysis, algorithmic fairness, and database. I'm co-supervisor of Bachelor's and Master's theses in Computer Science. During my Ph.D., I served as a Ph.D. Student Representative in the Department Council and Ph.D. Board, and as a member of the Ph.D. Programme Monitoring and Review Committee at the Dept. of Computer Science (University of Turin).
+</div>
+
+<!--<div class="collab-box" style="text-align: justify; text-justify: inter-word;">
+  <i class="fas fa-lightbulb" style="color: #64748b; margin-right: 8px;"></i> I am actively seeking collaborative research opportunities to contribute to environmental science.
+</div>-->
 
 <h2 class="section-title">Research Interests</h2>
 <div class="interest-pills">
-  <span class="pill">Climate Modeling</span>
-  <span class="pill">Deep Learning</span>
-  <span class="pill">Spatial Analytics</span>
-  <span class="pill">Remote Sensing</span>
-  <span class="pill">Urban Planning</span>
+  <span class="pill">Machine Learning</span>
+  <span class="pill">Data Mining</span>
+  <span class="pill">Responsible AI</span>
+  <span class="pill">Social Network Analysis</span>
 </div>
 
 <h2 class="section-title">Recent News</h2>
