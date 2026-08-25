@@ -1,0 +1,362 @@
+---
+layout: single
+title: "RESEARCH"
+permalink: /research/
+author_profile: false
+---
+
+<style>
+  /* =========================================
+     1. STATIC LIGHT THEME VARIABLES (Locked)
+     ========================================= */
+  :root {
+    --port-primary: #2c3e50;    /* Dark Academic Blue */
+    --port-text: #3b3b3b;       /* Dark Gray for readability */
+    --port-muted: #64748b;      /* Muted gray for subtitles */
+    --port-bg: #fdfdfd;         /* Almost white for cards */
+    --port-border: #eaeaea;     /* Light gray borders */
+    --accent-color: #f0f7ff;    /* Soft blue for milestones */
+  }
+
+  /* =========================================
+     2. GLOBAL HEADER FIXES
+     ========================================= */
+  .masthead, 
+  .masthead__inner-wrap, 
+  .masthead__menu, 
+  .masthead__menu ul, 
+  .greedy-nav {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+  }
+  
+  .masthead {
+    border-bottom: 1px solid var(--port-border) !important;
+  }
+
+  .masthead a, 
+  .masthead__menu-item,
+  .masthead__menu-item a,
+  .greedy-nav a, 
+  .greedy-nav .visible-links,
+  .greedy-nav .visible-links li,
+  .greedy-nav .visible-links a {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: var(--port-text) !important;
+  }
+
+  .masthead a:hover,
+  .greedy-nav a:hover,
+  .greedy-nav .visible-links a:hover,
+  .greedy-nav .visible-links li.masthead__menu-item--current a,
+  .greedy-nav .visible-links li.masthead__menu-item--current a:hover {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: var(--port-primary) !important;
+  }
+
+  h1.page__title, .page__title {
+    color: var(--port-primary) !important;
+    font-weight: 700 !important;
+  }
+
+  /* =========================================
+     3. RESEARCH INTERESTS STYLES
+     ========================================= */
+  .research-section-title {
+    margin-top: 45px; 
+    border-bottom: 1px solid var(--port-border); 
+    padding-bottom: 8px; 
+    text-transform: uppercase; 
+    color: var(--port-primary);
+    font-size: 1.15em !important; 
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .interests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+
+  .interest-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    background: var(--port-bg);
+    border: 1px solid var(--port-border);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .interest-badge:hover {
+    transform: translateY(-2px);
+    border-color: var(--port-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: var(--accent-color);
+  }
+
+  .interest-icon {
+    font-size: 1.25em;
+    color: var(--port-primary);
+    width: 24px;
+    text-align: center;
+  }
+
+  .interest-badge span {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--port-text);
+    line-height: 1.4;
+  }
+
+  /* =========================================
+     4. RESEARCH PROJECTS STYLES
+     ========================================= */
+  .projects-list {
+    margin-top: 25px;
+  }
+
+  .project-card {
+    background: var(--port-bg);
+    border: 1px solid var(--port-border);
+    border-left: 4px solid var(--port-primary);
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                box-shadow 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                border-color 0.22s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    border-color: var(--port-primary);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 6px;
+  }
+
+  .project-title {
+    font-size: 1.15em !important;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+    color: var(--port-primary);
+    flex-grow: 1;
+  }
+
+  .project-link {
+    color: var(--port-primary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .project-link:hover {
+    color: #3172b4;
+  }
+
+  .title-icon {
+    font-size: 0.7em;
+    margin-left: 4px;
+    vertical-align: middle;
+    color: var(--port-muted);
+  }
+
+  .project-year {
+    background-color: var(--accent-color);
+    color: var(--port-primary);
+    font-weight: 700;
+    font-size: 0.85em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    white-space: nowrap;
+  }
+
+  .project-location {
+    font-size: 0.92em;
+    color: var(--port-text);
+    margin: 0 0 15px 0;
+    font-weight: 500;
+  }
+
+  .project-location i {
+    color: var(--port-muted);
+    font-style: normal;
+  }
+
+  .project-desc {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: var(--port-text);
+    text-align: justify;
+    margin: 0 0 15px 0;
+  }
+
+  .project-funding {
+    background-color: #f8fafc;
+    border: 1px solid var(--port-border);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    color: var(--port-text);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .project-funding strong {
+    color: var(--port-primary);
+  }
+
+  .project-partners {
+    font-size: 0.88em;
+    color: var(--port-muted);
+    line-height: 1.5;
+  }
+
+  .project-partners strong {
+    color: var(--port-text);
+  }
+
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .project-header {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+
+    .project-year {
+      align-self: flex-start;
+    }
+    
+    .interests-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+{% include base_path %}
+
+<!-- =========================================
+     RESEARCH INTERESTS
+     ========================================= -->
+
+<h2 class="research-section-title">Research Interests</h2>
+
+<div class="interests-container">
+  <div class="interest-badge">
+    <i class="fas fa-brain interest-icon"></i>
+    <span>Machine Learning</span>
+  </div>
+  <div class="interest-badge">
+    <i class="fas fa-database interest-icon"></i>
+    <span>Data Mining</span>
+  </div>
+  <div class="interest-badge">
+    <i class="fas fa-balance-scale interest-icon"></i>
+    <span>Algorithmic Fairness</span>
+  </div>
+  <div class="interest-badge">
+    <i class="fas fa-user-shield interest-icon"></i>
+    <span>Privacy & Data Protection</span>
+  </div>
+  <div class="interest-badge">
+    <i class="fas fa-project-diagram interest-icon"></i>
+    <span>Clustering, Bi-Clustering, Co-Clustering</span>
+  </div>
+  <div class="interest-badge">
+    <i class="fas fa-network-wired interest-icon"></i>
+    <span>Network Analysis (Social Networks, Privacy Measures, Social Media)</span>
+  </div>
+</div>
+
+<!-- =========================================
+     RESEARCH PROJECTS
+     ========================================= -->
+
+<h2 class="research-section-title">Research Projects (Participation)</h2>
+
+<div class="projects-list">
+  
+  <!-- Project 1: DESPITE FRAUD -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-year">2025 &ndash; 2026</span>
+      <h3 class="project-title">
+        <a href="https://despitefraud.it/" target="_blank" rel="noopener" class="project-link">
+          DESPITE FRAUD <i class="fas fa-external-link-alt title-icon"></i>
+        </a>
+      </h3>
+    </div>
+    <p class="project-location">University of Turin &ndash; <i>Turin, Italy</i></p>
+    
+    <p class="project-desc">
+      Development of a portable decision-support platform combining non-destructive Near-Infrared (NIR) and Raman spectroscopy with machine learning for food authenticity and fraud detection. Key applications include identifying fresh versus thawed fish and detecting mechanically separated meat in products.
+    </p>
+    
+    <div class="project-funding">
+      <strong>Funding:</strong> Funded under the P.R. FESR 2021/27 SWIch program (Support of the Whole Innovation Chain).
+    </div>
+    
+    <div class="project-partners">
+      <strong>Partners & Collaborators:</strong> Politecnico di Torino, Istituto Zooprofilattico Sperimentale del Piemonte, Liguria e Valle d'Aosta (IZS PLV), Esselunga, Amadori, Informatica System Srl, Asseltech Srl.
+    </div>
+  </div>
+
+  <!-- Project 2: TOPML -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-year">2024 &ndash; 2026</span>
+      <h3 class="project-title">
+        <a href="https://topml.uni-mainz.de/" target="_blank" rel="noopener" class="project-link">
+          TOPML &ndash; Trading off Non-Functional Properties of Machine Learning <i class="fas fa-external-link-alt title-icon"></i>
+        </a>
+      </h3>
+    </div>
+    <p class="project-location">Johannes Gutenberg University &ndash; <i>Mainz, Germany</i></p>
+    
+    <p class="project-desc">
+      Research on non-functional trade-offs in Machine Learning, focusing on representation learning, unsupervised learning, and algorithmic fairness.
+    </p>
+    
+    <div class="project-funding">
+      <strong>Funding:</strong> Funded by the Carl Zeiss Stiftung.
+    </div>
+  </div>
+
+  <!-- Project 3: Social4School -->
+  <div class="project-card">
+    <div class="project-header">
+      <span class="project-year">2015 &ndash; 2023</span>
+      <h3 class="project-title">
+        <a href="https://hdl.handle.net/2318/1620778" target="_blank" rel="noopener" class="project-link">
+          Social4School <i class="fas fa-external-link-alt title-icon"></i>
+        </a>
+      </h3>
+    </div>
+    <p class="project-location">University of Turin &ndash; <i>Turin, Italy</i></p>
+    
+    <p class="project-desc">
+      An educational research project investigating the design and use of a simulated social networking platform to promote digital privacy awareness and critical evaluation of online information (including fake news detection) among primary and secondary school students.
+    </p>
+    
+    <div class="project-funding">
+      <strong>Funding:</strong> Funded by the Fondazione CRT.
+    </div>
+  </div>
+
+</div>
