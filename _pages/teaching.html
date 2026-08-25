@@ -1,12 +1,275 @@
 ---
-layout: archive
-title: "Teaching"
+layout: single
+title: "TEACHING"
 permalink: /teaching/
-author_profile: true
+author_profile: false
 ---
+
+<style>
+  /* =========================================
+     1. STATIC LIGHT THEME VARIABLES (Locked)
+     ========================================= */
+  :root {
+    --port-primary: #2c3e50;    /* Dark Academic Blue */
+    --port-text: #3b3b3b;       /* Dark Gray for readability */
+    --port-muted: #64748b;      /* Muted gray for subtitles */
+    --port-bg: #fdfdfd;         /* Almost white for cards */
+    --port-border: #eaeaea;     /* Light gray borders */
+    --accent-color: #f0f7ff;    /* Soft blue for milestones */
+  }
+
+  /* =========================================
+     2. GLOBAL HEADER FIXES
+     ========================================= */
+  .masthead, 
+  .masthead__inner-wrap, 
+  .masthead__menu, 
+  .masthead__menu ul, 
+  .greedy-nav {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+  }
+  
+  .masthead {
+    border-bottom: 1px solid var(--port-border) !important;
+  }
+
+  .masthead a, 
+  .masthead__menu-item,
+  .masthead__menu-item a,
+  .greedy-nav a, 
+  .greedy-nav .visible-links,
+  .greedy-nav .visible-links li,
+  .greedy-nav .visible-links a {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: var(--port-text) !important;
+  }
+
+  .masthead a:hover,
+  .greedy-nav a:hover,
+  .greedy-nav .visible-links a:hover,
+  .greedy-nav .visible-links li.masthead__menu-item--current a,
+  .greedy-nav .visible-links li.masthead__menu-item--current a:hover {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: var(--port-primary) !important;
+  }
+
+  h1.page__title, .page__title {
+    color: var(--port-primary) !important;
+    font-weight: 700 !important;
+  }
+
+  /* =========================================
+     3. TEACHING LAYOUT STYLES
+     ========================================= */
+  .teach-section-title {
+    margin-top: 45px; 
+    border-bottom: 1px solid var(--port-border); 
+    padding-bottom: 8px; 
+    text-transform: uppercase; 
+    color: var(--port-primary);
+    font-size: 1.15em !important; 
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .teaching-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .teaching-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 18px;
+    margin-bottom: 20px;
+    background: var(--port-bg);
+    border: 1px solid var(--port-border);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                box-shadow 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                border-color 0.22s ease;
+  }
+
+  .teaching-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    border-color: var(--port-primary);
+  }
+
+  /* Left column: Date/Hours badges */
+  .teaching-time-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+
+  .year-badge {
+    background-color: var(--accent-color);
+    color: var(--port-primary);
+    font-weight: 700;
+    font-size: 0.85em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    letter-spacing: 0.02em;
+  }
+
+  .hours-badge {
+    background-color: #f8fafc;
+    color: var(--port-muted);
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid var(--port-border);
+    letter-spacing: 0.01em;
+  }
+
+  /* Right column: Details */
+  .teaching-details {
+    flex-grow: 1;
+  }
+
+  .course-title {
+    font-weight: 700;
+    color: var(--port-primary);
+    font-size: 1.08em;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+  }
+
+  .institution {
+    font-size: 0.92em;
+    color: var(--port-text);
+    margin: 0 0 6px 0;
+    font-weight: 500;
+  }
+
+  .institution i {
+    color: var(--port-muted);
+    font-style: normal;
+  }
+
+  .program-info {
+    font-size: 0.88em;
+    color: var(--port-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .program-link {
+    color: #3172b4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.15s ease;
+  }
+
+  .program-link:hover {
+    color: var(--port-primary);
+    text-decoration: underline;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .teaching-item {
+      flex-direction: column;
+      gap: 14px;
+      padding: 16px;
+    }
+
+    .teaching-time-info {
+      flex-direction: row;
+      min-width: auto;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .year-badge, .hours-badge {
+      flex: 1;
+      padding: 6px 8px;
+    }
+  }
+</style>
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<!-- =========================================
+     CONTRACT LECTURER
+     ========================================= -->
+
+<h2 class="teach-section-title">Contract Lecturer</h2>
+
+<ul class="teaching-list">
+  {% assign contract_lecturers = site.teaching
+    | where: "category", "contract_lecturer"
+    | sort: "date"
+    | reverse %}
+
+  {% for post in contract_lecturers %}
+    <li class="teaching-item">
+      <div class="teaching-time-info">
+        <span class="year-badge">{{ post.academic_year }}</span>
+        <span class="hours-badge">{{ post.hours }}</span>
+      </div>
+      <div class="teaching-details">
+        <h3 class="course-title">{{ post.title }}</h3>
+        <p class="institution">{{ post.venue }} &ndash; <i>{{ post.location }}</i></p>
+        {% if post.program %}
+          <p class="program-info">
+            {% if post.link %}
+              <a href="{{ post.link }}" class="program-link" target="_blank" rel="noopener">{{ post.program }}</a>
+            {% else %}
+              {{ post.program }}
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+
+<!-- =========================================
+     ACADEMIC TUTOR
+     ========================================= -->
+
+<h2 class="teach-section-title">Academic Tutor</h2>
+
+<ul class="teaching-list">
+  {% assign academic_tutors = site.teaching
+    | where: "category", "academic_tutor"
+    | sort: "date"
+    | reverse %}
+
+  {% for post in academic_tutors %}
+    <li class="teaching-item">
+      <div class="teaching-time-info">
+        <span class="year-badge">{{ post.academic_year }}</span>
+        <span class="hours-badge">{{ post.hours }}</span>
+      </div>
+      <div class="teaching-details">
+        <h3 class="course-title">{{ post.title }}</h3>
+        <p class="institution">{{ post.venue }} &ndash; <i>{{ post.location }}</i></p>
+        {% if post.program %}
+          <p class="program-info">
+            {% if post.link %}
+              <a href="{{ post.link }}" class="program-link" target="_blank" rel="noopener">{{ post.program }}</a>
+            {% else %}
+              {{ post.program }}
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
