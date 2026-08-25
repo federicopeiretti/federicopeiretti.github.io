@@ -7,9 +7,10 @@ venue: "Politecnico di Torino"
 location: "Turin, Italy"
 academic_year: "2025--2026"
 hours: "8 hours"
-program: "II Level Master's Programme: HumanAIze"
+program: "HumanAIze"
+program_type: "II Level Master's Programme"
 link: "https://www.polito.it/didattica/master-e-formazione-permanente/master-universitari/offerta-master-universitari/humanaize"
-date: 2025-09-03
+date: 2025-09-01
 ---
 
 AI Fairness - Data Privacy (8 hours) for the II Level Master's Programme: [HumanAIze](https://www.polito.it/didattica/master-e-formazione-permanente/master-universitari/offerta-master-universitari/humanaize) at Politecnico di Torino (Turin, Italy).

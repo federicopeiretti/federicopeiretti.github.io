@@ -7,7 +7,8 @@ venue: "Politecnico di Torino"
 location: "Turin, Italy"
 academic_year: "2023--2024"
 hours: "4 hours"
-program: "II Level Master's Programme: HumanAIze"
+program: "HumanAIze"
+program_type: "II Level Master's Programme"
 link: "https://www.polito.it/didattica/master-e-formazione-permanente/master-universitari/offerta-master-universitari/humanaize"
 date: 2023-09-01
 ---
