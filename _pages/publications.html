@@ -301,7 +301,7 @@ author_profile: false
 
         {% if post.authors %}
           <div class="authors-list">
-            {{ post.authors }}
+            {{ post.authors | replace: 'Peiretti, F.', '<strong>Peiretti, F.</strong>' }}
           </div>
         {% endif %}
 
@@ -312,18 +312,23 @@ author_profile: false
             {% if post.venue %}
               <span
                 class="meta-btn venue-btn"
-                data-full="{{ post.venue | escape }}">
-                {{ post.venue }}
+                data-full="{{ post.venue | escape }}"
+                data-category="{{ post.category | escape }}">
+                {% if post.journal %}{{ post.journal }}{% else %}{{ post.venue }}{% endif %}
               </span>
             {% endif %}
 
+            {% if post.status %}
+              <span class="impact-badge">
+                {{ post.status }}
+              </span>
+            {% endif %}
 
             {% if post.abstract %}
               <span class="meta-btn abstract-btn">
                 Abstract
               </span>
             {% endif %}
-
 
             {% if post.paperurl %}
               <a
@@ -339,12 +344,7 @@ author_profile: false
 
 
           <!-- Venue information -->
-
-          {% if post.venue %}
-            <div class="info-box details-info"></div>
-          {% else %}
-            <div class="info-box details-info"></div>
-          {% endif %}
+          <div class="info-box details-info"></div>
 
 
           <!-- Abstract -->
@@ -393,7 +393,7 @@ author_profile: false
 
         {% if post.authors %}
           <div class="authors-list">
-            {{ post.authors }}
+            {{ post.authors | replace: 'Peiretti, F.', '<strong>Peiretti, F.</strong>' }}
           </div>
         {% endif %}
 
@@ -405,7 +405,8 @@ author_profile: false
             {% if post.venue %}
               <span
                 class="meta-btn venue-btn"
-                data-full="{{ post.venue | escape }}">
+                data-full="{{ post.venue | escape }}"
+                data-category="{{ post.category | escape }}">
                 {{ post.venue }}
               </span>
             {% endif %}
@@ -458,60 +459,19 @@ author_profile: false
 
 
 <!-- =========================================
-     OLD / UNUSED SECTIONS
-     Kept commented intentionally.
+     POSTERS & PRESENTATIONS
      ========================================= -->
 
-<!--
-
-<h2 class="pub-section-title">Book Chapters</h2>
+<h2 class="pub-section-title">Posters & Presentations</h2>
 
 <ol class="pub-list">
 
-  <li>
-    <span class="paper-title">
-      Example Book Chapter
-    </span>
-
-    <div class="authors-list">
-      Author, A., Author, B. (2024).
-    </div>
-
-    <div class="paper-meta">
-      <span class="meta-btn venue-btn">
-        Publisher
-      </span>
-
-      <span class="meta-btn abstract-btn">
-        Abstract
-      </span>
-
-      <a class="meta-btn doi-btn" href="#">
-        View Paper
-      </a>
-    </div>
-
-  </li>
-
-</ol>
-
--->
-
-
-<!-- =========================================
-     UNDER REVISION
-     ========================================= -->
-
-<h2 class="pub-section-title">Under Revision</h2>
-
-<ol class="pub-list">
-
-  {% assign under_revision = site.publications
-    | where: "category", "under_revision"
+  {% assign posters = site.publications
+    | where: "category", "posters"
     | sort: "date"
     | reverse %}
 
-  {% for post in under_revision %}
+  {% for post in posters %}
 
     {% unless post.path contains "/old/" %}
 
@@ -523,60 +483,150 @@ author_profile: false
 
         {% if post.authors %}
           <div class="authors-list">
-            {{ post.authors }}
+            {{ post.authors | replace: 'Peiretti, F.', '<strong>Peiretti, F.</strong>' | replace: 'Peiretti F.', '<strong>Peiretti, F.</strong>' }}
           </div>
         {% endif %}
 
 
-        <div class="paper-meta">
+        {% if post.venue or post.paperurl or post.abstract %}
 
-          {% if post.venue %}
-            <span
-              class="meta-btn venue-btn"
-              data-full="{{ post.venue | escape }}">
-              {{ post.venue }}
-            </span>
-          {% endif %}
+          <div class="paper-meta">
+
+            {% if post.venue %}
+              <span
+                class="meta-btn venue-btn"
+                data-full="{{ post.venue | escape }}"
+                data-category="{{ post.category | escape }}">
+                {{ post.venue }}
+              </span>
+            {% endif %}
 
 
-          <span class="impact-badge">
-            Under Revision
-          </span>
+            {% if post.abstract %}
+              <span class="meta-btn abstract-btn">
+                Abstract
+              </span>
+            {% endif %}
 
+
+            {% if post.paperurl %}
+              <a
+                class="meta-btn doi-btn"
+                href="{{ post.paperurl }}"
+                target="_blank"
+                rel="noopener">
+                View Poster
+              </a>
+            {% endif %}
+
+          </div>
+
+
+          <!-- Venue information -->
+
+          <div class="info-box details-info"></div>
+
+
+          <!-- Abstract -->
 
           {% if post.abstract %}
-            <span class="meta-btn abstract-btn">
-              Abstract
-            </span>
+            <div class="info-box abstract-info">
+              <p>
+                {{ post.abstract }}
+              </p>
+            </div>
           {% endif %}
 
+        {% endif %}
 
-          {% if post.paperurl %}
-            <a
-              class="meta-btn doi-btn"
-              href="{{ post.paperurl }}"
-              target="_blank"
-              rel="noopener">
-              View Paper
-            </a>
-          {% endif %}
+      </li>
 
-        </div>
+    {% endunless %}
+
+  {% endfor %}
+
+</ol>
 
 
-        <!-- Venue information -->
+<!-- =========================================
+     PH.D. THESIS
+     ========================================= -->
 
-        <div class="info-box details-info"></div>
+<h2 class="pub-section-title">Ph.D. Thesis</h2>
 
+<ol class="pub-list">
 
-        <!-- Abstract -->
+  {% assign phd_thesis = site.publications
+    | where: "category", "phd_thesis"
+    | sort: "date"
+    | reverse %}
 
-        {% if post.abstract %}
-          <div class="info-box abstract-info">
-            <p>
-              {{ post.abstract }}
-            </p>
+  {% for post in phd_thesis %}
+
+    {% unless post.path contains "/old/" %}
+
+      <li>
+
+        <span class="paper-title">
+          {{ post.title }}
+        </span>
+
+        {% if post.authors %}
+          <div class="authors-list">
+            {{ post.authors | replace: 'Peiretti, F.', '<strong>Peiretti, F.</strong>' }}
           </div>
+        {% endif %}
+
+
+        {% if post.venue or post.paperurl or post.abstract %}
+
+          <div class="paper-meta">
+
+            {% if post.venue %}
+              <span
+                class="meta-btn venue-btn"
+                data-full="{{ post.venue | escape }}"
+                data-category="{{ post.category | escape }}">
+                Ph.D. Thesis
+              </span>
+            {% endif %}
+
+
+            {% if post.abstract %}
+              <span class="meta-btn abstract-btn">
+                Abstract
+              </span>
+            {% endif %}
+
+
+            {% if post.paperurl %}
+              <a
+                class="meta-btn doi-btn"
+                href="{{ post.paperurl }}"
+                target="_blank"
+                rel="noopener">
+                View Thesis
+              </a>
+            {% endif %}
+
+          </div>
+
+
+          <!-- Venue information -->
+
+          <div class="info-box details-info"></div>
+
+
+          <!-- Abstract -->
+
+          {% if post.abstract %}
+            <div class="info-box abstract-info">
+              <p>
+                {{ post.abstract }}
+              </p>
+            </div>
+          {% endif %}
+
         {% endif %}
 
       </li>
@@ -610,7 +660,7 @@ author_profile: false
 
 
         /* -----------------------------------------
-           VENUE
+           VENUE / DETAILS
            ----------------------------------------- */
 
         if (this.classList.contains('venue-btn')) {
@@ -624,8 +674,17 @@ author_profile: false
           }
 
           const content = this.getAttribute('data-full');
+          const category = this.getAttribute('data-category');
 
-          const label = category === 'manuscripts' ? 'Journal' : 'Venue';
+          let label = 'Venue';
+          if (category === 'manuscripts') {
+            label = 'Journal';
+          } else if (category === 'phd_thesis') {
+            label = 'Thesis Details';
+          } else if (category === 'posters') {
+            label = 'Presentation Details';
+          }
+
           const html =
               '<strong>' + label + ':</strong> ' + content;
 
