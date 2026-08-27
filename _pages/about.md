@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "BIOGRAPHY"
+title: "Federico Peiretti"
 author_profile: false
 redirect_from: 
   - /about/
