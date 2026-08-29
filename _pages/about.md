@@ -220,43 +220,28 @@ redirect_from:
 <div class="news-scroll-container">
   
   <div class="timeline-item milestone">
-    <div class="timeline-date">Mar 2026</div>
-    <div class="timeline-content">Accepted a fully-funded Ph.D. offer in Environmental Data Science at the <strong>UES</strong>.</div>
+    <div class="timeline-date">Jul 2026</div>
+    <div class="timeline-content">Successfully defended my Ph.D. thesis, <strong>"Fair Associative Co-clustering"</strong>, at the University of Turin! <i class="fas fa-graduation-cap"></i></div>
   </div>
   
   <div class="timeline-item">
-    <div class="timeline-date">Jan 2025</div>
-    <div class="timeline-content">Urban canopy mapping paper accepted at <strong>ICCI '25</strong>.</div>
+    <div class="timeline-date">Jun 2026</div>
+    <div class="timeline-content">Started teaching the courses <strong>"Database Analyst and Designer"</strong> and <strong>"Ethics, Privacy, and AI"</strong> in the Master's programme in <em>Diritto dell'Intelligente Amministrare Pubblico</em> (DIAP) at the University of Turin (UniTo).</div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">July 2024</div>
-    <div class="timeline-content">Microclimate temperature analysis paper accepted in <strong>Sustainable Cities and Society</strong>.</div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Apr 2024</div>
-    <div class="timeline-content">Urban Heat Island forecasting paper published in the <strong>Journal of Environmental Informatics</strong>.</div>
+    <div class="timeline-date">Jan 2026</div>
+    <div class="timeline-content">Started teaching the course <strong>"AI Fairness & Privacy"</strong> in the Master's programme in <em>HumanAIze</em> at the Polytechnic University of Turin (PoliTo).</div>
   </div>
 
   <div class="timeline-item milestone">
-    <div class="timeline-date">Aug 2023</div>
-    <div class="timeline-content">Joined the <strong>Department of Urban Development</strong> as a <strong>Climate Data Scientist</strong>.</div>
+    <div class="timeline-date">Nov 2025</div>
+    <div class="timeline-content">Joined the Department of Computer Science at the University of Turin as a <strong>Research Fellow</strong> for the <strong>Despite Fraud</strong> project.</div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">Jul 2023</div>
-    <div class="timeline-content">Book chapter accepted in the <strong>Handbook of Computational Sustainability</strong> (Springer).</div>
-  </div>
-
-  <div class="timeline-item milestone">
-    <div class="timeline-date">Dec 2022</div>
-    <div class="timeline-content">Graduated with an <strong>M.Sc. in Geospatial Analytics</strong> (CGPA: 4.0).</div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Aug 2021</div>
-    <div class="timeline-content">Joined the <strong>Institute of Earth Sciences</strong> as a <strong>Graduate Research Assistant</strong>.</div>
+    <div class="timeline-date">May 2025</div>
+    <div class="timeline-content">Our paper, <strong>"Fair Associative Co-Clustering"</strong>, was accepted at <strong>ECML PKDD 2025</strong>!</div>
   </div>
 
 </div>
