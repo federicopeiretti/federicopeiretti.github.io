@@ -226,17 +226,17 @@ redirect_from:
   
   <div class="timeline-item">
     <div class="timeline-date">Jun 2026</div>
-    <div class="timeline-content">Started teaching the courses <strong>"Database Analyst and Designer"</strong> and <strong>"Ethics, Privacy, and AI"</strong> in the Master's programme in <em>Diritto dell'Intelligente Amministrare Pubblico</em> (DIAP) at the University of Turin (UniTo).</div>
+    <div class="timeline-content">Started teaching the courses <strong>"Database Analyst and Designer"</strong> and <strong>"Ethics, Privacy, and AI"</strong> in the Master's programme in <em>Diritto dell'Intelligente Amministrare Pubblico</em> at the University of Turin.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Jan 2026</div>
-    <div class="timeline-content">Started teaching the course <strong>"AI Fairness & Privacy"</strong> in the Master's programme in <em>HumanAIze</em> at the Polytechnic University of Turin (PoliTo).</div>
+    <div class="timeline-content">Started teaching the course <strong>"AI Fairness - Privacy"</strong> in the Master's programme in <em>HumanAIze</em> at the Politecnico di Torino.</div>
   </div>
 
   <div class="timeline-item milestone">
     <div class="timeline-date">Nov 2025</div>
-    <div class="timeline-content">Joined the Department of Computer Science at the University of Turin as a <strong>Research Fellow</strong> for the <strong>Despite Fraud</strong> project.</div>
+    <div class="timeline-content">Started new position as <strong>Research Fellow</strong> for the <strong>Despite Fraud</strong> project.</div>
   </div>
 
   <div class="timeline-item">
