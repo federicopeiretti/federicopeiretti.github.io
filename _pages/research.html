@@ -10,34 +10,40 @@ author_profile: false
      1. STATIC LIGHT THEME VARIABLES (Locked)
      ========================================= */
   :root {
-    --port-primary: #2c3e50;    /* Dark Academic Blue */
-    --port-text: #3b3b3b;       /* Dark Gray for readability */
-    --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #fdfdfd;         /* Almost white for cards */
-    --port-border: #eaeaea;     /* Light gray borders */
-    --accent-color: #f0f7ff;    /* Soft blue for milestones */
+    --port-primary: #2c3e50;
+    /* Dark Academic Blue */
+    --port-text: #3b3b3b;
+    /* Dark Gray for readability */
+    --port-muted: #64748b;
+    /* Muted gray for subtitles */
+    --port-bg: #fdfdfd;
+    /* Almost white for cards */
+    --port-border: #eaeaea;
+    /* Light gray borders */
+    --accent-color: #f0f7ff;
+    /* Soft blue for milestones */
   }
 
   /* =========================================
      2. GLOBAL HEADER FIXES
      ========================================= */
-  .masthead, 
-  .masthead__inner-wrap, 
-  .masthead__menu, 
-  .masthead__menu ul, 
+  .masthead,
+  .masthead__inner-wrap,
+  .masthead__menu,
+  .masthead__menu ul,
   .greedy-nav {
     background-color: #ffffff !important;
     background: #ffffff !important;
   }
-  
+
   .masthead {
     border-bottom: 1px solid var(--port-border) !important;
   }
 
-  .masthead a, 
+  .masthead a,
   .masthead__menu-item,
   .masthead__menu-item a,
-  .greedy-nav a, 
+  .greedy-nav a,
   .greedy-nav .visible-links,
   .greedy-nav .visible-links li,
   .greedy-nav .visible-links a {
@@ -56,7 +62,8 @@ author_profile: false
     color: var(--port-primary) !important;
   }
 
-  h1.page__title, .page__title {
+  h1.page__title,
+  .page__title {
     color: var(--port-primary) !important;
     font-weight: 700 !important;
   }
@@ -65,12 +72,12 @@ author_profile: false
      3. RESEARCH INTERESTS STYLES
      ========================================= */
   .research-section-title {
-    margin-top: 45px; 
-    border-bottom: 1px solid var(--port-border); 
-    padding-bottom: 8px; 
-    text-transform: uppercase; 
+    margin-top: 45px;
+    border-bottom: 1px solid var(--port-border);
+    padding-bottom: 8px;
+    text-transform: uppercase;
     color: var(--port-primary);
-    font-size: 1.15em !important; 
+    font-size: 1.15em !important;
     font-weight: 700;
     letter-spacing: 0.1em;
   }
@@ -131,9 +138,9 @@ author_profile: false
     padding: 24px;
     margin-bottom: 30px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), 
-                box-shadow 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), 
-                border-color 0.22s ease;
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+      border-color 0.22s ease;
   }
 
   .project-card:hover {
@@ -242,7 +249,7 @@ author_profile: false
     .project-year {
       align-self: flex-start;
     }
-    
+
     .interests-container {
       grid-template-columns: 1fr;
     }
@@ -291,7 +298,7 @@ author_profile: false
 <h2 class="research-section-title">Research Projects (Participation)</h2>
 
 <div class="projects-list">
-  
+
   <!-- Project 1: DESPITE FRAUD -->
   <div class="project-card">
     <div class="project-header">
@@ -302,18 +309,22 @@ author_profile: false
         </a>
       </h3>
     </div>
-    <p class="project-location">University of Turin &ndash; <i>Turin, Italy</i></p>
-    
+    <p class="project-location">Computer Science Dept., University of Turin &ndash; <i>Turin, Italy</i></p>
+
     <p class="project-desc">
-      Development of a portable decision-support platform combining non-destructive Near-Infrared (NIR) and Raman spectroscopy with machine learning for food authenticity and fraud detection. Key applications include identifying fresh versus thawed fish and detecting mechanically separated meat in products.
+      Development of a portable decision-support platform combining non-destructive Near-Infrared (NIR) and Raman
+      spectroscopy with machine learning for food authenticity and fraud detection. Key applications include identifying
+      fresh versus thawed fish and detecting mechanically separated meat in products.
     </p>
-    
+
     <div class="project-funding">
-      <strong>Funding:</strong> Funded under the P.R. FESR 2021/27 SWIch program (Support of the Whole Innovation Chain).
+      <strong>Funding:</strong> Funded under the P.R. FESR 2021/27 SWIch program (Support of the Whole Innovation
+      Chain).
     </div>
-    
+
     <div class="project-partners">
-      <strong>Partners & Collaborators:</strong> Politecnico di Torino, Istituto Zooprofilattico Sperimentale del Piemonte, Liguria e Valle d'Aosta (IZS PLV), Esselunga, Amadori, Informatica System Srl, Asseltech Srl.
+      <strong>Partners & Collaborators:</strong> Politecnico di Torino, Istituto Zooprofilattico Sperimentale del
+      Piemonte, Liguria e Valle d'Aosta (IZS PLV), Esselunga, Amadori, Informatica System Srl, Asseltech Srl.
     </div>
   </div>
 
@@ -323,18 +334,21 @@ author_profile: false
       <span class="project-year">2024 &ndash; 2026</span>
       <h3 class="project-title">
         <a href="https://topml.uni-mainz.de/" target="_blank" rel="noopener" class="project-link">
-          TOPML &ndash; Trading off Non-Functional Properties of Machine Learning <i class="fas fa-external-link-alt title-icon"></i>
+          TOPML &ndash; Trading off Non-Functional Properties of Machine Learning <i
+            class="fas fa-external-link-alt title-icon"></i>
         </a>
       </h3>
     </div>
     <p class="project-location">Johannes Gutenberg University &ndash; <i>Mainz, Germany</i></p>
-    
+
     <p class="project-desc">
-      Research on non-functional trade-offs in Machine Learning, focusing on representation learning, unsupervised learning, and algorithmic fairness.
+      Research on trade-offs among non-functional properties of Machine Learning, with a focus on algorithmic fairness,
+      transparency, and privacy in representation learning and unsupervised learning.
     </p>
-    
+
     <div class="project-funding">
-      <strong>Funding:</strong> Funded by the Carl Zeiss Stiftung.
+      <strong>Research director:</strong> Prof. Dr. Stefan Kramer.<br>
+      <strong>Funding:</strong> Funded by the Carl Zeiss Foundation.
     </div>
   </div>
 
@@ -348,13 +362,18 @@ author_profile: false
         </a>
       </h3>
     </div>
-    <p class="project-location">University of Turin &ndash; <i>Turin, Italy</i></p>
-    
+    <p class="project-location">Computer Science Dept., University of Turin &ndash; <i>Turin, Italy</i></p>
+
     <p class="project-desc">
-      An interactive web platform simulating realistic social network dynamics (posting, sharing, and liking under teacher supervision) to educate school students on online privacy and misinformation (fake news). Co-directed by Prof. Ruggero G. Pensa and Dr. Sara Capecchi, I co-designed and developed the initial version of the platform, which has since expanded into an optimized web service and Android application.
+      Social4School is a web application that allows primary and secondary school students to experience the typical
+      dynamics of information spread through a realistic interactive simulation. Under the supervision of the teacher,
+      they are inserted in a small artificial social graph, and, through the different stages of the game, they can post
+      sentences with different levels of sensitivity (in terms of privacy, discrimination, hate speech).
+      The aim is to enhance young people’s awareness of the mechanisms of online social networks interaction.
     </p>
-    
+
     <div class="project-funding">
+      <strong>Research directors:</strong> Prof. Ruggero G. Pensa, Dr. Sara Capecchi.<br>
       <strong>Funding:</strong> Funded by the Fondazione CRT.
     </div>
   </div>
